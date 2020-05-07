@@ -8,6 +8,7 @@ import store from './store';
 
 //Components
 import Navbar from './components/navbar/navbar';
+import Alert from './components/navbar/Alert';
 
 //Pages
 import Home from './components/pages/Home';
@@ -20,6 +21,7 @@ function App() {
       <Router>
         <Fragment>
           <Navbar />
+          <Alert />
           <Switch>
             <Route exact path='/' component={Home} />
             <Route exact path ='/game' component={Game} />
