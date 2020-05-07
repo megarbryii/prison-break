@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux'
 
 //Game components
 import gameButtons from '../game/gameButtons';
 import gameOutput from '../game/gameOutput';
 
-export const Game = () => {
+const Game = () => {
     const [ currentRoom, setCurrentRoom ] = useState({});
 
     return (
@@ -19,3 +21,9 @@ export const Game = () => {
         </div>
     )
 }
+
+Game.propType = {
+
+}
+
+export default connect()(Game);
