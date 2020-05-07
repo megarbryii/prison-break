@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function() {
+const Home = () => {
     return(
         <div className='home-wrapper'>
             <h1>Welcome to Prison Break!</h1>
@@ -24,3 +24,5 @@ export default function() {
         </div>
     )
 }
+
+export default Home;
