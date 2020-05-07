@@ -1,0 +1,66 @@
+.game-wrapper {
+    font-family: $game-font;
+    font-size: 3rem;
+    display: grid;
+    grid-template-columns: 30px [s] 2fr [m] 1fr [e] 30px;
+    grid-column-gap: 60px;
+    
+    .left-side{
+        grid-column: s/m;
+        grid-template-rows: [name-s] 60px [name-e output-s] 1fr [output-e input-s] 60px [input-e];
+
+
+        .btn-output {
+            display: grid;
+            grid-row: input-s/input-e;
+            grid-template-columns: repeat(4, auto);
+            grid-gap: 35px;
+            padding: 25px 15px;
+
+            .btn {
+                @include btn-base();
+                background-color: $hover-color;
+            }
+
+            .btn-lose{
+                @include btn-base();
+                background-color: red;
+            }
+
+            .btn-win {
+                @include btn-base();
+                background-color: yellow;
+
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+        
+           
+    }
+
+    .right-side{
+        grid-column: m/e;
+        grid-template-rows: [inv-s] 60px [inv-e invout-s] 1fr [invout-e];
+        grid-row-gap: 5px;
+
+
+        .game-inventory{
+            grid-row: inv-s/inv-e;
+            text-align: center;
+
+            h2 {
+                margin: 10px 0;
+            }
+        }
+
+        .inventory-output{
+            grid-row: invout-s/invout-e;
+            height: 452px;
+            border: 2px solid $main-color;
+            background-color: black;
+            overflow-y: auto;
+        }
+    }
+}

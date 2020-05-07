@@ -1,0 +1,11 @@
+@mixin btn-base {
+    font-family: $game-font;
+    font-size: 2rem;
+    padding: 5px;
+    color: black;
+
+    &:hover {
+        opacity: .75;
+        color: white;
+    }
+}

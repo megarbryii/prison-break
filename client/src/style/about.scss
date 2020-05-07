@@ -1,0 +1,32 @@
+.about-wrapper{
+    font-size: 2.25rem;
+    margin: 0 150px;
+
+    .image-wrapper{
+        display: flex;
+        justify-content: center;
+        padding: 35px 0;
+    }
+
+    a{
+        color:$link-color;
+        text-decoration: none;
+
+        &:hover{
+            color:$hover-color;
+        }
+    }
+
+    .about-title{
+        display: flex;
+        justify-content: center;
+        font-size: 2.75rem;
+        text-decoration: underline;
+    }
+
+    .about-name{
+        display: flex;
+        justify-content: center;
+        font-size: 3rem;
+    }
+}

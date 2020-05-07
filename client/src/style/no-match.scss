@@ -1,0 +1,9 @@
+.no-match-wrapper{
+    height: auto;
+    top: 50%;
+
+    .match-error {
+        display: flex;
+        justify-content: center;
+    }
+}

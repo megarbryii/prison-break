@@ -1,0 +1,27 @@
+.output-wrapper {
+    display: grid;
+    grid-column: 1fr;
+    grid-template-rows: [name-s] 60px [name-e output-s] 1fr [output-e];
+    grid-gap: 5px;
+
+    .output-name{
+        grid-row: name-s/name-e;
+        text-align: center;
+
+        h2{
+            margin: 10px 0;
+        }
+    }
+
+    .output-text {
+        grid-row: output-s/output-e;
+        border: 3px solid $main-color;
+        height: 450px;
+        margin-bottom: 20px;
+        background-color: black;
+
+        p { 
+            padding: 20px;
+        }
+    }
+}
