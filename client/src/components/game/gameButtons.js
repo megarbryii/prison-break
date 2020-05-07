@@ -1,13 +1,13 @@
 import React from 'react';
 
-const GameButton = (props) => {
+const GameButton = ({ id, className, onClick, text }) => {
     return(
         <button
-                key={props.id}
-                className={`${props.className}`}
-                onClick={props.onClick}
+                key={id}
+                className={`${className}`}
+                onClick={onClick}
             >
-            {props.text}
+            {text}
         </button>
     )
 }

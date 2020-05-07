@@ -6,9 +6,9 @@ import './style/main.scss';
 import Navbar from './components/navbar/navbar';
 
 //Pages
-import Home from './components/pages/home';
-import About from './components/pages/about';
-import Game from './components/pages/game';
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Game from './components/pages/Game';
 
 function App() {
   return (
