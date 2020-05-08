@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 
@@ -7,7 +7,6 @@ import gameButtons from '../game/gameButtons';
 import gameOutput from '../game/gameOutput';
 
 const Game = () => {
-    const [ currentRoom, setCurrentRoom ] = useState({});
 
     return (
         <div className='game-wrapper'>
