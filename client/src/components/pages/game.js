@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+
+import { getRoom } from '../../actions/game';
 
 //Game components
-import gameButtons from '../game/gameButtons';
-import gameOutput from '../game/gameOutput';
+import GameButton from '../game/gameButtons';
+import GameOutput from '../game/gameOutput';
 
-const Game = () => {
+const Game = ({ game: { name, desc }, match, getRoom }) => {
+    useEffect(() => {
+        getRoom(match.params.id);
+    }, [getRoom, match.params.id]);
 
     return (
         <div className='game-wrapper'>
             <div className="left-side">
-
+                <GameOutput 
+                    name={name}
+                    text={desc}
+                />
             </div>
 
             <div className="right-side">
@@ -22,7 +30,12 @@ const Game = () => {
 }
 
 Game.propType = {
-
+    getRoom: PropTypes.func.isRequired,
+    game: PropTypes.object.isRequired
 }
 
-export default connect()(Game);
+const mapStateToProps = state = {
+    game: state.game
+}
+
+export default connect(mapStateToProps, { getRoom })(Game);

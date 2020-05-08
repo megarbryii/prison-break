@@ -10,7 +10,6 @@ export const LOGOUT = 'LOGOUT';
 //Rooms
 export const GET_ROOM = 'GET_ROOM';
 export const ROOM_ERROR = 'ROOM_ERROR';
-export const CLEAR_ROOM = 'CLEAR_ROOM';
 export const UPDATE_ROOM = 'UPDATE_ROOM';
 export const DELETE_ROOM = 'DELETE_ROOM';
 
