@@ -1,5 +1,6 @@
 import {
     GET_ROOM,
+    GET_ROOMS,
     ROOM_ERROR,
     UPDATE_ROOM,
     DELETE_ROOM
@@ -8,6 +9,7 @@ import {
 const initialState = {
     currentRoom: Room[-3],
     room: {},
+    rooms: [],
     loading: true,
     error: {}
 }
@@ -21,6 +23,12 @@ export default function(state = initialState, action) {
                 ...state,
                 room: payload,
                 currentRoom: Room[payload.room_id],
+                loading: false
+            }
+        case GET_ROOMS:
+            return {
+                ...state,
+                rooms: payload,
                 loading: false
             }
         case UPDATE_ROOM:
