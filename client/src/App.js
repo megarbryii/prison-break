@@ -14,6 +14,8 @@ import Alert from './components/navbar/Alert';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Game from './components/pages/Game';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
 
 function App() {
   return (
@@ -24,8 +26,10 @@ function App() {
           <Alert />
           <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path ='/game' component={Game} />
+            <Route exact path='/game' component={Game} />
             <Route exact path='/about' component={About} />
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/register' component={Register} />
           </Switch>
         </Fragment>
       </Router>

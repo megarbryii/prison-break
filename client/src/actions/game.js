@@ -130,7 +130,7 @@ export const deleteRoom = (id) => async dispatch => {
 }
 
 //Delete choice from a room
-export const deleteRoom = id => async dispatch => {
+export const deleteChoice = id => async dispatch => {
     try {
         const res = await axios.delete(`/api/room/choice/${id}`);
 
