@@ -61,8 +61,7 @@ export const createRoom = (formData, history, edit = false) => async dispatch =>
         dispatch(setAlert(edit ? 'Room Updated' : 'Room Created', 'success'));
 
         if(!edit) {
-            //todo: Create rooms page
-            //history.push('/');
+            history.push('/game-dashboard');
         }
     } catch (err) {
         const errors = err.response.data.error;

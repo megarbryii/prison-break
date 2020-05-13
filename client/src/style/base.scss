@@ -8,3 +8,8 @@ body {
     color: $main-color;
     background-color: $background;
 }
+
+.btn {
+    @include btn-base;
+    background-color: $link-color;
+}

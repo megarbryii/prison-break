@@ -9,6 +9,7 @@ import store from './store';
 //Components
 import Navbar from './components/navbar/navbar';
 import Alert from './components/navbar/Alert';
+import PrivateRoute from './components/routes/PrivateRoute';
 
 //Pages
 import Home from './components/pages/Home';
@@ -16,6 +17,8 @@ import About from './components/pages/About';
 import Game from './components/pages/Game';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
+import GameDashboard from './components/dashboard/GameDashboard';
+import CreateRoom from './components/dashboard/CreateRoom';
 
 function App() {
   return (
@@ -30,7 +33,9 @@ function App() {
             <Route exact path='/about' component={About} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/register' component={Register} />
-          </Switch>
+            <PrivateRoute exact path='/game-dashboard' component={GameDashboard} />          
+            <PrivateRoute exact path='/room-edit' component={CreateRoom} />          
+            </Switch>
         </Fragment>
       </Router>
     </Provider>
