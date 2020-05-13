@@ -7,9 +7,9 @@ import {
 } from '../actions/types';
 
 const initialState = {
-    currentRoom: Room[-3],
     room: {},
     rooms: [],
+    currentRoom: rooms[-3],
     loading: true,
     error: {}
 }
@@ -22,7 +22,7 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 room: payload,
-                currentRoom: Room[payload.room_id],
+                currentRoom: rooms[payload.room_id],
                 loading: false
             }
         case GET_ROOMS:

@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 import { getRoom } from '../../actions/game';
 
 //Game components
-import GameButton from '../game/gameButtons';
-import GameOutput from '../game/gameOutput';
+import GameButton from '../game/GameButtons';
+import GameOutput from '../game/GameOutput';
 
-const Game = ({ game: { name, desc }, match, getRoom }) => {
+const Game = ({ game: { name, desc, choice: { choiceText, nextRoom } }, match, getRoom }) => {
     useEffect(() => {
         getRoom(match.params.id);
     }, [getRoom, match.params.id]);
