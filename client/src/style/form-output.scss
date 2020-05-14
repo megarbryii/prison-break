@@ -7,19 +7,41 @@
     input[type='text'],
     input[type='email'],
     input[type='password'] {
+       font-family: 'VT323', monospace; 
+       color: $main-color;
        display: block;
        width: 300px;
        padding: 0.4rem;
        font-size: 2rem;
+       border-top: 0px;
+       border-right: 0px;
+       border-left: 0px;
        border-bottom: 2px solid $link-color; 
+       background-color: transparent;
+       transition: 0.5s all ease-in-out;
+       margin-bottom: 0.4rem;
+
+       &::placeholder {
+           color: $main-color;
+       }
+
+       &:focus {
+           outline: none;
+       }
     }
 
     textarea {
+        font-family: 'VT323', monospace;
         display: block;
         width: 100%;
         padding: 0.4rem;
+        background-color: black;
         font-size: 2rem;
         border: 2px solid $link-color;
+
+        &::placeholder {
+            color: $main-color;
+        }
     }
 
     input[type='submit'] {

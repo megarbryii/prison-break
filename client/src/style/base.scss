@@ -10,6 +10,6 @@ body {
 }
 
 .btn {
-    @include btn-base;
+    @include btn-base();
     background-color: $link-color;
 }

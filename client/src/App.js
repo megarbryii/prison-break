@@ -33,8 +33,8 @@ function App() {
             <Route exact path='/about' component={About} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/register' component={Register} />
-            <PrivateRoute exact path='/game-dashboard' component={GameDashboard} />          
-            <PrivateRoute exact path='/room-edit' component={CreateRoom} />          
+            <Route exact path='/game-dashboard' component={GameDashboard} />          
+            <Route exact path='/room-edit' component={CreateRoom} />          
             </Switch>
         </Fragment>
       </Router>
