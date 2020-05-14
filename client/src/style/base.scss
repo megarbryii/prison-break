@@ -9,6 +9,17 @@ body {
     background-color: $background;
 }
 
+a {
+    color: $link-color;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        color: $hover-color;
+        border-bottom: 1px solid $hover-color;
+    }
+}
+
 .btn {
     @include btn-base();
     background-color: $link-color;

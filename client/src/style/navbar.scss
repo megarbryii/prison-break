@@ -15,17 +15,6 @@
         font-size: 3.5rem;
         margin: 15px 0;
 
-        a {
-            color: $link-color;
-            text-decoration: none;
-            cursor: pointer;
-
-            &:hover {
-                color: $hover-color;
-                border-bottom: 1px solid $hover-color;
-            }
-        }
-
         .page-active {
             color: $hover-color;
             border-bottom: 1px solid $hover-color;
