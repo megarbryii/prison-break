@@ -70,10 +70,16 @@ const CreateRoom = ({ createRoom, getRoom, game: { room, loading }}) => {
                     />
                 </div>
 
-                <input type="submit" className='btn'/>
-                <Link to='/game-dashboard' className='btn'>
-                    Go Back
-                </Link>
+                <div className="btn-row">
+                    <div className="sub">
+                        <input type="submit" className='btn'/>
+                    </div>
+                    <div className="dash">
+                        <Link to='/game-dashboard' className='btn'>
+                            Go Back
+                        </Link>
+                    </div>
+                </div>
             </form>
         </Fragment>
     )
