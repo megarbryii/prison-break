@@ -36,7 +36,7 @@ export const getRooms = () => async dispatch => {
         });
     } catch (err) {
         dispatch({
-            type: PROFILE_ERROR,
+            type: ROOM_ERROR,
             payload: { msg: err.response.statusText, status: err.response.status }
         });
     }
@@ -121,7 +121,7 @@ export const deleteRoom = (id) => async dispatch => {
             dispatch(setAlert('Room removed'));
         } catch (err) {
             dispatch({
-                type: PROFILE_ERROR,
+                type: ROOM_ERROR,
                 payload: { msg: err.response.statusText, status: err.response.status }
             });
         } 

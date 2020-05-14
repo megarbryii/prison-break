@@ -10,3 +10,5 @@ export const GameDashActions = () => {
         </div>
     )
 }
+
+export default GameDashActions;

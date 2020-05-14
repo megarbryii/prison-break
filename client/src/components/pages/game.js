@@ -34,8 +34,8 @@ Game.propType = {
     game: PropTypes.object.isRequired
 }
 
-const mapStateToProps = state = {
+const mapStateToProps = state => ({
     game: state.game
-}
+})
 
 export default connect(mapStateToProps, { getRoom })(Game);

@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getRooms } from '../../actions/game';
 
@@ -14,14 +15,14 @@ const GameDashboard = ({ game: { rooms }, getRooms }) => {
     return (
         <Fragment>
             <h1>Rooms Dashboard</h1>
-            { room !== null ? (
+            { rooms !== null ? (
                 <Fragment>
                     <GameDashActions />
                 </Fragment>
             ) : (
                 <Fragment>
                    <p>You need to create a room</p> 
-                   <Link to='room-edit' className='btn'>
+                   <Link to='/room-edit' className='btn'>
                        Create Room
                    </Link>
                 </Fragment>

@@ -52,6 +52,9 @@ const Login = ({ login, isAuthenticated }) => {
           />
         </div>
         <input type="submit" className="btn" value="Login" />
+        <p>
+          Need to sign up? <Link to="/register">Register</Link>
+        </p>
       </form>
     </Fragment>
   );

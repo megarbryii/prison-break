@@ -6,7 +6,7 @@ import {
     REGISTER_FAIL,
     USER_LOADED,
     AUTH_ERROR,
-    LOGIN_SUCESS,
+    LOGIN_SUCESSFUL,
     LOGIN_FAIL,
     LOGOUT
 } from './types';
@@ -77,7 +77,7 @@ export const login = (email, password) => async dispatch => {
         const res = await axios.post('/api/auth', body, config);
 
         dispatch({
-            type: LOGIN_SUCESS,
+            type: LOGIN_SUCESSFUL,
             payload: res.data
         });
 
