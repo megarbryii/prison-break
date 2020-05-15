@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 //Components
-import Navbar from './components/navbar/navbar';
+import Navbar from './components/navbar/Navbar';
 import Alert from './components/navbar/Alert';
 import PrivateRoute from './components/routes/PrivateRoute';
 
@@ -33,8 +33,8 @@ function App() {
             <Route exact path='/about' component={About} />
             <Route exact path='/login' component={Login} />
             <Route exact path='/register' component={Register} />
-            <Route exact path='/game-dashboard' component={GameDashboard} />          
-            <Route exact path='/room-edit' component={CreateRoom} />          
+            <PrivateRoute exact path='/game-dashboard' component={GameDashboard} />          
+            <PrivateRoute exact path='/room-edit' component={CreateRoom} />          
             </Switch>
         </Fragment>
       </Router>
