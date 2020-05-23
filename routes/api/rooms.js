@@ -108,7 +108,7 @@ router.delete('/', auth, async (req, res) => {
     }
 })
 
-//@route PUT /api/profiles/choice
+//@route PUT /api/room/choice
 //@desc Add room choices
 //@access Private
 router.put('/choice', [auth, [

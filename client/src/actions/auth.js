@@ -69,6 +69,7 @@ export const login = (email, password) => async (dispatch) => {
 
   try {
     const res = await axios.post('/api/auth', body, config);
+    console.log("posting to axios");
 
     dispatch({
       type: LOGIN_SUCCESS,
@@ -76,8 +77,10 @@ export const login = (email, password) => async (dispatch) => {
     });
 
     dispatch(loadUser());
+    console.log("dispatch")
   } catch (err) {
     const errors = err.response.data.errors;
+    console.log("catching error")
 
     if (errors) {
       errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));

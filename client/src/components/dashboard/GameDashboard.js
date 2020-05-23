@@ -6,7 +6,7 @@ import { getRooms } from '../../actions/game';
 
 import GameDashActions from './GameDashActions';
 
-const GameDashboard = ({ game: { rooms }, getRooms }) => {
+const GameDashboard = ({ game: { rooms }, getRooms, auth: { isAuthenticated } }) => {
     useEffect(() => {
         getRooms();
     }, [getRooms]);
@@ -15,7 +15,7 @@ const GameDashboard = ({ game: { rooms }, getRooms }) => {
     return (
         <Fragment>
             <h1>Rooms Dashboard</h1>
-            { rooms !== null ? (
+            { rooms !== null && isAuthenticated ? (
                 <Fragment>
                     <GameDashActions />
                 </Fragment>
@@ -33,11 +33,14 @@ const GameDashboard = ({ game: { rooms }, getRooms }) => {
 
 GameDashboard.propTypes = {
     game: PropTypes.object.isRequired,
-    getRooms: PropTypes.func.isRequired
+    getRooms: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    isAuthenticated: PropTypes.bool
 }
 
 const mapStateToProps = state => ({
-    game: state.game
+    game: state.game,
+    auth: state.auth
 })
 
 export default connect(mapStateToProps, { getRooms })(GameDashboard);
